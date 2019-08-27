@@ -76,7 +76,26 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+	      <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
       </plugins>
     </pluginManagement>
   </build>
+	<distributionManagement>
+    <repository>
+        <id>central</id>
+	 <name>ip-172-31-41-237.ap-southeast-1.compute.internal-releases</name>
+        <url>http://52.77.231.77:8040/artifactory/libs-release</url>
+      
+    </repository>
+
+    <snapshotRepository>
+        <id>snapshots</id>
+             <name>ip-172-31-41-237.ap-southeast-1.compute.internal-snapshots</name>
+        <url>http://52.77.231.77:8040/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+	</distributionManagement>
 </project>
