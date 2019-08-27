@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>PG_GroupID</groupId>
-  <artifactId>PG_Artifact_ID</artifactId>
-  <version>PG_V_1.0.0</version>
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>App</artifactId>
+  <version>1.0.2</version>
 
-  <name>PG_Artifact_ID</name>
+  <name>App</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -50,14 +50,14 @@
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
-	  <version>3.0.2</version>
-	  <configuration>
-<archive>
-<manifest>
-<mainClass>PG_Package.App</mainClass>
-</manifest>
-</archive>
-</configuration>
+          <version>3.0.2</version>
+		  <configuration>
+		     <archive>
+			  <manifest>
+			    <mainClass>PG_Package.App</mainClass>
+				</manifest>
+		       </archive>
+			  </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -76,26 +76,24 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-	      <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.7</version>
-			</plugin>
+		 <plugin>
+		 <groupId>org.codehaus.mojo</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.2</version>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
-	<distributionManagement>
+<distributionManagement>
     <repository>
         <id>central</id>
-	 <name>ip-172-31-41-237.ap-southeast-1.compute.internal-releases</name>
+        <name>ip-172-31-41-237.ap-southeast-1.compute.internal-releases</name>
         <url>http://52.77.231.77:8040/artifactory/libs-release</url>
-      
     </repository>
-
     <snapshotRepository>
         <id>snapshots</id>
-             <name>ip-172-31-41-237.ap-southeast-1.compute.internal-snapshots</name>
+       <name>ip-172-31-41-237.ap-southeast-1.compute.internal-snapshots</name>
         <url>http://52.77.231.77:8040/artifactory/libs-snapshot</url>
     </snapshotRepository>
-	</distributionManagement>
+</distributionManagement>
 </project>
